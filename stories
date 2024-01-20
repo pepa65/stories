@@ -6,15 +6,15 @@
 ssv=stories.ssv
 
 Story(){ # I:i,th,en
-	echo "<a href=\"$i.html\">$i. $th<br>($en)<br></a>" >>index.html
-	sed -e "s/%1/$i/" -e "s/%2/$th/" -e "s/%3/$en/" html.s >"$i.html"
+	echo "<a href=\"$i.html\">$i. $th<br><i>$en</i><br></a>" >>app/index.html
+	sed -e "s/%1/$i/" -e "s/%2/$th/" -e "s/%3/$en/" html.s >"app/$i.html"
 }
 
-cp html.i index.html
+cp html.i app/index.html
 IFS=';'
 while read i th en
 do # Every line
-	mp3=$i.mp3 jpg=$i.jpg
+	mp3=app/$i.mp3 jpg=app/$i.jpg
 	[[ -f $mp3 && -f $jpg ]] &&
 		Story && continue
 	echo -n "Missing:"
