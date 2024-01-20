@@ -14,11 +14,11 @@ cp html.i app/index.html
 IFS=';'
 while read i th en
 do # Every line
-	mp3=app/$i.mp3 jpg=app/$i.jpg
-	[[ -f $mp3 && -f $jpg ]] &&
+	aud=app/$i.mp3 img=app/$i.png
+	[[ -f $aud && -f $img ]] &&
 		Story && continue
 	echo -n "Missing:"
-	[[ -f $mp3 ]] || echo -n " $mp3"
-	[[ -f $jpg ]] || echo -n " $jpg"
+	[[ -f $aud ]] || echo -n " $aud"
+	[[ -f $img ]] || echo -n " $img"
 	echo
 done <"$ssv"
