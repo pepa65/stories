@@ -35,19 +35,3 @@ function filter(query){
 	}
 }
 </script>
-<a href="1.html">1. พระเจ้าผู้เป็นอยู่ก่อนทุกสิ่ง<br>(God before all)<br></a>
-<a href="2.html">2. พระคัมภีร์ หนังสือของพระเจ้า<br>(Bible, book of God)<br></a>
-<a href="3.html">3. พระเจ้าสร้างเทวาตุตา<br>(God creates angels)<br></a>
-<a href="4.html">4. การเนรมิตสร้างโลก<br>(Creation)<br></a>
-<a href="5.html">5. พระเจ้าสร้างมนุษย์<br>(God creates mankind)<br></a>
-<a href="6.html">6. มนุษย์ทำบาป<br>(Mankind falls)<br></a>
-<a href="7.html">7. การฆ่าคนอันแรก<br>(Cain and Abel)<br></a>
-<a href="8.html">8. น้ำท่วมโลก<br>(Flood)<br></a>
-<a href="9.html">9. หอบาเบล<br>(Tower of Babel)<br></a>
-<a href="10.html">10. พระเจ้าทรงเรียกอับราฮาม<br>(God calls Abraham)<br></a>
-<a href="11.html">11. อิสอัคบุตรแห่งพระสัญญา<br>(Isaac, son of promise)<br></a>
-<a href="12.html">12. ยาโคบ<br>(Jacob)<br></a>
-<a href="13.html">13. โยเซฟ<br>(Joseph)<br></a>
-<a href="14.html">14. โมเสส<br>(Moses)<br></a>
-<a href="15.html">15. ภัยพิบัติและปัสคา<br>(Plague and Passover)<br></a>
-<a href="16.html">16. พระเจ้าทรงแยกน้ำทะเล<br>(God splits the sea)<br></a>

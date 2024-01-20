@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+# stories - Generate pages and index html from .ssv
+# Required: coreutils(cp) sed
+
+ssv=stories.ssv
+
+Story(){ # I:i,th,en
+	echo "<a href=\"$i.html\">$i. $th<br>($en)<br></a>" >>index.html
+	sed -e "s/%1/$i/" -e "s/%2/$th/" -e "s/%3/$en/" html.s >"$i.html"
+}
+
+cp html.i index.html
+IFS=';'
+while read i th en
+do # Every line
+	mp3=$i.mp3 jpg=$i.jpg
+	[[ -f $mp3 && -f $jpg ]] &&
+		Story && continue
+	echo -n "Missing:"
+	[[ -f $mp3 ]] || echo -n " $mp3"
+	[[ -f $jpg ]] || echo -n " $jpg"
+	echo
+done <"$ssv"

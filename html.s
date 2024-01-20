@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="th">
-<title>9. หอบาเบล Tower of Babel</title>
+<title>%1. %2 %3</title>
 <link rel="icon" href="icon.png">
 <style>
 img{position:relative; left:50%; right:50%; margin-left:-50vw; margin-right:-50vw; max-width:100vw; width: 100vw;}
 </style>
-<img src="9.jpg">
+<img src="%1.jpg">
 <script>
 document.addEventListener('dblclick', function(){location.href='index.html';});
 document.addEventListener('keypress', function(){location.href='index.html';});
 var t=new Audio();
-t.src='9.mp3';
+t.src='%1.mp3';
 document.addEventListener("click", function(){
 	if(t.paused) t.play();
 	else t.pause();
