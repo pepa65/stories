@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-
+set -e
 # stories - Generate pages and index html from .ssv
 # Required: coreutils(cp) sed
-
+# This file should be in the same directory as: html.i html.s stories.ssv app/
 ssv=stories.ssv
 
 Story(){ # I:i,th,en
@@ -10,6 +10,7 @@ Story(){ # I:i,th,en
 	sed -e "s/%1/$i/" -e "s/%2/$th/" -e "s/%3/$en/" html.s >"app/$i.html"
 }
 
+[[ ${0//\/} = $0 ]] || cd ${0%/*}
 cp html.i app/index.html
 IFS=';'
 while read i th en

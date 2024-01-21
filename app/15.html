@@ -5,18 +5,19 @@
 <style>
 img{position:relative; left:50%; right:50%; margin-left:-50vw; margin-right:-50vw; max-width:100vw; width: 100vw;}
 </style>
-<img src="15.png">
+<img src="15.png" id="img">
 <script>
-document.addEventListener('dblclick', function(){location.href='index.html';});
+const SWIPE_MAX_MS=500;
+const SWIPE_MIN_PX=100;
+var a=new Audio();
+a.src='15.mp3';
+var h=0;
+var img=document.getElementById('img');
 document.addEventListener('keypress', function(){location.href='index.html';});
-var t=new Audio();
-t.src='15.mp3';
-document.addEventListener("click", function(){
-	if(t.paused) t.play();
-	else t.pause();
-});
-document.addEventListener("touchstart", touchStart);
-document.addEventListener("touchend", touchEnd);
+document.addEventListener('dblclick', function(){a.currentTime=0;});
+document.addEventListener('click', function(){if(a.paused) a.play(); else a.pause();});
+document.addEventListener('touchstart', touchStart);
+document.addEventListener('touchend', touchEnd);
 function touchStart(e){
 	e.preventDefault();
 	touchStartTime=Date.now();
@@ -27,16 +28,27 @@ function touchEnd(e){
 	const touchEndTime=Date.now();
 	swipe(e, touchEndTime-touchStartTime);
 }
-const DURATION_THRESHOLD=500;
-const MOVE_THRESHOLD=100;
 function swipe(e, duration){
 	const endX=e.changedTouches[0].clientX;
 	const endY=e.changedTouches[0].clientY;
-	if(duration<=DURATION_THRESHOLD){
-		if(Y-endY>MOVE_THRESHOLD) location.href='index.html';
-		else if(endY-Y>MOVE_THRESHOLD) t.currentTime=0;
-		else if(endX-X>MOVE_THRESHOLD) t.currentTime+=20;
-		else if(X-endX>MOVE_THRESHOLD) t.currentTime-=20;
+	if(duration<SWIPE_MAX_MS){
+		if(Y-endY>SWIPE_MIN_PX){
+			if(h){
+				img.setAttribute('src', '15.png');
+				h=0;
+			}else location.href='index.html';
+		}
+		else if(endX-X>SWIPE_MIN_PX) a.currentTime+=20;
+		else if(X-endX>SWIPE_MIN_PX) a.currentTime-=20;
+		else if(endY-Y>SWIPE_MIN_PX){
+			if(h){
+				img.setAttribute('src', '15.png');
+				h=0;
+			}else{
+				img.setAttribute('src', 'help.png');
+				h=1;
+			}
+		};
 	}
 }
 </script>
