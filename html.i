@@ -14,13 +14,19 @@
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
 <style>
-body{height:100vh; width:100vw; margin:0; padding:0; font-family:"Garuda",serif; font-size:12pt; color:#000; background:#fff;}
+body{height:100vh; width:100vw; margin:0; padding:0; font-family:"Garuda",serif; font-size:12pt; color:#000; background-color:#fff;}
 h3{margin:.4em; line-height:1.1;}
 span{color:#555;}
 input{margin:0; width:100vw; padding:.4em; font-size:14pt; outline:none; color:#000; background-color:#ddd;}
 a,a:visited,a:link,a:hover,a:active{display:block; width:100vw; color:#000; text-decoration:none; margin:0; padding:10px; border:solid 1px #888; line-height:1;}
 a:hover,a:active{background-color:#ddd;}
 i{color:#555; padding-left:1.4em;}
+@media screen and (prefers-color-scheme:dark){
+	body{background-color:#222; color:#fff;}
+	input{color:#fff; background-color:#444;}
+	a,a:visited,a:link,a:hover,a:active{color:#fff;}
+	i{color:#ccc;}
+}
 </style>
 <h3>เรื่องคามลำดับ<br><span>ฟังพระคำของพระเจ้า</span></h3>
 <input type="search" id="search" value="" placeholder=" &#x1F50D; ค้นหา หัวข้อ/เลขที่" autocomplete autofocus>
