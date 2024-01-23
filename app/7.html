@@ -5,7 +5,7 @@
 <style>
 img{position:relative; left:50%; right:50%; margin-left:-50vw; margin-right:-50vw; max-width:100vw; width: 100vw;}
 @media screen and (prefers-color-scheme:dark){
-	*{filter:invert(1);}
+	img{filter:invert(1);}
 	body{background-color:#000;}
 }
 </style>
