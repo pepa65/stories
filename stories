@@ -8,14 +8,9 @@ ssv=stories.ssv
 Story(){ # I:i,th,en,aud
 	echo "<a href=\"$i.html\">$i. $th<br><i>$en</i><br></a>" >>app/index.html
 	cp html.s "app/$i.html"
-	if [[ -f $aud ]]
-	then # Audio, do full js
-		cat s.js >>"app/$i.html"
-	else # No Audio
-		sed -i 's/img src=/img border="3" src=/' "app/$i.html"
-		echo "document.addEventListener('keypress', function(){location.href='index.html';});" >>"app/$i.html"
-		echo "document.addEventListener('click', function(){location.href='index.html';});" >>"app/$i.html"
-	fi
+	 [[ -f $aud ]] &&
+		cat s.js >>"app/$i.html" || # Audio, do full js
+		cat i.js >>"app/$i.html" # No audio, only image
 	echo "</script>" >>"app/$i.html"
 	sed -i -e "s/%1/$i/" -e "s/%2/$th/" -e "s/%3/$en/" "app/$i.html"
 }

@@ -9,8 +9,10 @@ img{position:relative; left:50%; right:50%; margin-left:-50vw; margin-right:-50v
 	body{background-color:#000;}
 }
 </style>
-<img border="3" src="32.png" id="img">
+<img src="32.png" id="img">
 <script>
+var img=document.getElementById('img');
+img.setAttribute('border', '3px solid yellow');
 document.addEventListener('keypress', function(){location.href='index.html';});
 document.addEventListener('click', function(){location.href='index.html';});
 </script>
