@@ -1,6 +1,7 @@
 {
-	"name": "ฟังเรื่องตามลำดับจากพระคริสตธรรมคัมภีร์ Audio Northern Thai Bible stories",
-	"short_name" : "เรื่องตามลำดับ NOD Bible stories",
+	"short_name" : "เรื่องพระคำ",
+	"name": "เรื่องตามลำดับไทยวน Northern Thai Bible stories",
+	"description": "ฟังเรื่องตามลำดับไทยวนจากพระคริสตธรรมคัมภีร์ Audio Northern Thai Bible stories",
 	"start_url": "./index.html",
 	"scope" : "./",
 	"icons": [
