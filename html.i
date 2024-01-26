@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="th">
-<title>ฟังเรื่องคามลำดับจากพระคริสตคัมภีร์</title>
-<meta name="description" content="ฟังเรื่องคามลำดับจากพระคริสตคัมภีร์ Audio Northern Thai Bible stories">
+<title>ฟังเรื่องตามลำดับจากพระคริสตธรรมคัมภีร์</title>
+<meta name="description" content="ฟังเรื่องตามลำดับจากพระคริสตธรรมคัมภีร์ Audio Northern Thai Bible stories">
 <meta name="copyright" content="OMF International">
 <meta name="reply-to" content="stories@godat.work">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,7 +23,7 @@ a:hover,a:active{background-color:#ddd;}
 i{color:#555; padding-left:1.4em;}
 @media screen and (prefers-color-scheme:dark){*{filter:invert();}}
 </style>
-<h3>เรื่องคามลำดับ<br><span>ฟังพระคำของพระเจ้า</span></h3>
+<h3>เรื่องตามลำดับ<br><span>ฟังพระคำของพระเจ้า</span></h3>
 <input type="search" id="search" value="" placeholder=" &#x1F50D; ค้นหา หัวข้อ/เลขที่" autocomplete autofocus>
 <script>
 const search=document.getElementById('search');
