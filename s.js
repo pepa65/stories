@@ -1,11 +1,11 @@
-const SWIPE_MAX_MS=500;
+const SWIPE_MAX_MS=1500;
 const SWIPE_MIN_PX=100;
 var a=new Audio();
 a.src='%1.mp3';
 var h=0;
 var img=document.getElementById('img');
 document.addEventListener('keypress', function(){location.href='index.html';});
-document.addEventListener('dblclick', function(){a.currentTime=0;});
+document.addEventListener('dblclick', function(){location.href='index.html';});
 document.addEventListener('click', function(){if(a.paused) a.play(); else a.pause();});
 document.addEventListener('touchstart', touchStart);
 document.addEventListener('touchend', touchEnd);

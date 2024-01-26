@@ -21,7 +21,7 @@ input{margin:0; width:100vw; padding:.4em; font-size:14pt; outline:none; color:#
 a,a:visited,a:link,a:hover,a:active{display:block; width:100vw; color:#000; text-decoration:none; margin:0; padding:10px; border:solid 1px #888; line-height:1;}
 a:hover,a:active{background-color:#ddd;}
 i{color:#555; padding-left:1.4em;}
-@media screen and (prefers-color-scheme:dark){*{filter:invert();}}
+@media (prefers-color-scheme:dark){html{filter:invert();}}
 </style>
 <h3>เรื่องตามลำดับ<br><span>ฟังพระคำของพระเจ้า</span></h3>
 <input type="search" id="search" value="" placeholder=" &#x1F50D; ค้นหา หัวข้อ/เลขที่" autocomplete autofocus>
