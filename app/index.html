@@ -11,7 +11,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
 <link rel="manifest" href="app.webmanifest">
-<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileColor" content="#603cba">
 <meta name="theme-color" content="#ffffff">
 <style>
 body{height:100vh; width:100vw; margin:0; padding:0; font-family:"Garuda",serif; font-size:12pt; color:#000; background-color:#fff;}
