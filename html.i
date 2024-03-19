@@ -18,8 +18,8 @@ body{height:100vh; width:100vw; margin:0; padding:0; font-family:"Garuda",serif;
 h3{margin:.4em; line-height:1.1;}
 span{color:#555;}
 input{margin:0; width:100vw; padding:.4em; font-size:14pt; outline:none; color:#000; background-color:#ddd;}
-a,a:visited,a:link,a:hover,a:active{display:block; width:100vw; color:#000; text-decoration:none; margin:0; padding:10px; border:solid 1px #888; line-height:1;}
-a:hover,a:active{background-color:#ddd;}
+a:link,a:visited,a:hover,a:active,a:focus{display:block; width:100vw; color:#000; text-decoration:none; margin:0; padding:10px; border:solid 1px #888; line-height:1;}
+a:hover,a:active,a:focus{background-color:#ddd;}
 i{color:#555; padding-left:1.4em;}
 @media (prefers-color-scheme:dark){html{filter:invert();}}
 </style>

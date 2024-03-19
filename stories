@@ -3,14 +3,24 @@ set -e
 # stories - Generate pages and index html from .ssv
 # Required: coreutils(cp) sed
 # This file should be in the same directory as: html.i html.s stories.ssv app/
+# - html.i:  index template
+# - html.s:  story template
+# - stories.ssv:  list of properties
+# - app:  destination directory
+
 ssv=stories.ssv
 
 Story(){ # I:i,th,en,aud
-	echo "<a href=\"$i.html\">$i. $th<br><i>$en</i><br></a>" >>app/index.html
+	local icon
 	cp html.s "app/$i.html"
-	 [[ -f $aud ]] &&
-		cat s.js >>"app/$i.html" || # Audio, do full js
-		cat i.js >>"app/$i.html" # No audio, only image
+	if [[ -f $aud ]]
+	then # Audio, do full js
+		cat s.js >>"app/$i.html"
+		icon='&#128266;'
+	else # No audio, only image
+		cat i.js >>"app/$i.html"
+	fi
+	echo "<a href=\"$i.html\">$icon $i. $th<br><i>$en</i><br></a>" >>app/index.html
 	echo "</script>" >>"app/$i.html"
 	sed -i -e "s/%1/$i/" -e "s/%2/$th/" -e "s/%3/$en/" "app/$i.html"
 }
