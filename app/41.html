@@ -10,7 +10,11 @@ img{position:relative; left:50%; right:50%; margin-left:-50vw; margin-right:-50v
 </style>
 <img src="41.png" id="img">
 <script>
-document.getElementById('img').style.border='5px solid red';
-document.addEventListener('keypress', function(){location.href='index.html';});
-document.addEventListener('click', function(){location.href='index.html';});
+const DELAY_MS=500;
+var a=new Audio();
+a.src='41.mp3';
+var img=document.getElementById('img');
+document.addEventListener('keypress', function(){location.href='index.html'});
+document.addEventListener('dblclick', function(){location.href='index.html'});
+document.addEventListener('click', function(){if(a.paused) setTimeout(()=>{a.play()}, DELAY_MS); else a.pause()});
 </script>
